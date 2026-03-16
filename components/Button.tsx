@@ -35,17 +35,17 @@ const Button = memo(
     switch (variant) {
       case "primary":
         variantClassName = bgColorClassName
-          ? "bg-dark-primary text-dark-onPrimary"
+          ? ""
           : "bg-dark-primary hover:bg-primary-70 text-dark-onPrimary";
         break;
       case "secondary":
         variantClassName = bgColorClassName
-          ? "bg-white text-black"
+          ? ""
           : "bg-white hover:bg-gray-200 text-black";
         break;
       case "danger":
         variantClassName = bgColorClassName
-          ? "bg-red-500 text-white"
+          ? ""
           : "bg-red-500 hover:bg-red-600 text-white";
         break;
       case "ghost":
@@ -55,7 +55,7 @@ const Button = memo(
         break;
       default:
         variantClassName = bgColorClassName
-          ? "bg-dark-primary text-dark-onPrimary"
+          ? ""
           : "bg-dark-primary hover:bg-primary-70 text-dark-onPrimary";
         break;
     }

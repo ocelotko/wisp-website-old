@@ -72,7 +72,7 @@ export default function BlockchainIsland() {
   return (
     <div class="bg-dark-background min-h-screen text-dark-onBackground font-dmsans">
       <Header />
-      <main class="w-full px-12 py-8">
+      <main class="w-full p-6 md:p-12 pt-24 md:pt-32">
         <div class="flex items-start gap-4 mb-8">
           <GoBackArrow />
           <div>

@@ -47,7 +47,8 @@ const Card = ({
       className || ""
     }`;
   const headerClassName = "flex items-center justify-start mb-2 w-full";
-  const buttonContainerClassName = "w-full mt-4 flex justify-center gap-2";
+  const buttonContainerClassName =
+    "w-full mt-4 flex flex-col sm:flex-row justify-start gap-4";
 
   return (
     <div className={cardClassName} style={{ height: "fit-content" }}>
