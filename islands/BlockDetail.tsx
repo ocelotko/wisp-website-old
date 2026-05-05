@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import { formatTimeAgo, formatTimestamp } from "../utils/format.ts";
+import ClipboardCopy from "./ClipboardCopy.tsx";
 
 interface BlockDetails {
   version: number;
@@ -80,6 +81,20 @@ export default function BlockDetail({ block }: BlockDetailProps) {
                 ({formatTimestamp(block.timestamp)})
               </span>
             </p>
+
+            {block.mined_by && (
+              <p class="flex flex-col lg:grid lg:grid-cols-5 md!gap-2 lg:items-center justify-between">
+                <div class="flex items-center space-x-2 col-span-1 uppercase text-sm text-dark-onSurfaceVariant">
+                  Mined by
+                </div>
+                <span class="w-full col-span-4 font-mono break-all">
+                  <ClipboardCopy
+                    text={block.mined_by}
+                    className="text-dark-primary"
+                  />
+                </span>
+              </p>
+            )}
 
             <p class="flex flex-col lg:grid lg:grid-cols-5 md!gap-2 lg:items-center justify-between">
               <div class="flex items-center space-x-2 col-span-1 uppercase text-sm text-dark-onSurfaceVariant">

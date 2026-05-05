@@ -13,7 +13,7 @@ interface ApiTransactionInput {
 
 interface ApiTransactionOutput {
   value: string;
-  pubkey: string;
+  address: string;
 }
 
 interface TransactionDetails {

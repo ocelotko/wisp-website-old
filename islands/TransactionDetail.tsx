@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import { formatTimestamp } from "../utils/format.ts";
+import ClipboardCopy from "./ClipboardCopy.tsx";
 
 interface ApiTransactionInput {
   outpoint: string;
@@ -8,7 +9,7 @@ interface ApiTransactionInput {
 
 interface ApiTransactionOutput {
   value: string;
-  pubkey: string;
+  address: string;
 }
 
 interface TransactionDetails {
@@ -157,7 +158,11 @@ export default function TransactionDetail(
                   <span class="text-dark-tertiary">{output.value}</span>
                 </p>
                 <p class="font-mono break-all text-xs mt-2">
-                  <strong>Recipient PubKey:</strong> {output.pubkey}
+                  <strong>Recipient Address:</strong>{" "}
+                  <ClipboardCopy
+                    text={output.address}
+                    className="text-dark-primary"
+                  />
                 </p>
               </div>
             ))}
